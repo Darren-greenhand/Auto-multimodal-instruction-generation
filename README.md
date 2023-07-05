@@ -4,6 +4,19 @@
 
 自动生成多模态的指令微调数据
 
+## 使用方法：
+
+准备好mscoco的caption文件，或者使用github库自带的mscoco2017文件
+
+```shell
+python generate.py --captiondata "captions_val2017.json" --output 'instructons.json'
+```
+
+可选的参数有：
+
+* `--num_processings`指定进程数，默认10
+* `--num_per_slice` 指定每个进程每次处理多少数据，默认128
+* `--num_icls`指定in-context阶段采样的上下文数量。
 
 
 ## 实现功能
@@ -51,17 +64,5 @@
 
 
 
-使用方法：
 
-准备好mscoco的caption文件，或者使用github库自带的mscoco2017文件
-
-```shell
-python generate.py --captiondata "captions_val2017.json" --output 'instructons.json'
-```
-
-可选的参数有：
-
-* `--num_processings`指定进程数，默认10
-* `--num_per_slice` 指定每个进程每次处理多少数据，默认128
-* `--num_icls`指定in-context阶段采样的上下文数量。
 
