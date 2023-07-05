@@ -83,7 +83,8 @@ def generate(subcaption):
     global nice_icl
     global num_icls
     global icl_list
-    
+
+    # 最初的样例
     instruction = """
     Now I will show you a caption of an image, please raise a question about the image and answer it. \
     Please make sure that the question and answer are related to the image. \
@@ -97,13 +98,14 @@ def generate(subcaption):
     # 用来检查icl是否合格，用形容词修饰确保icl质量（粗略）
     prompt_check = """
     Now I will give you a caption of an image, and a question and answer about the image. \
-    if the question is perfectly related to the caption, and the answer is totally correct while it can be found undoubtedly in the caption, \
-    Please output 1, otherwise outputput 0. \
+    if the question below is perfectly related to the caption, and the answer is totally correct while it can be found undoubtedly in the caption, \
+    please output 1, otherwise output 0. \
     Caption: {} \
     Question: {} \
     Answer: {} \
     """
 
+    # 用来引导用户使用icl的指导语，收集好examples后使用
     instruction_icl = """
     Now I will show you a caption of an image, please raise a question about the image and answer it. \
     Please make sure that the question and answer are related to the image. \
@@ -113,6 +115,7 @@ def generate(subcaption):
     Caption: {} \
     """
     
+    #收集的icl用样例
     icl = """
     Caption: {} \
     Question: {} \
