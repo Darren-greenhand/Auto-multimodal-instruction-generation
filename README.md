@@ -4,14 +4,14 @@
 
 自动生成多模态的指令微调数据
 
-## 使用方法：
-
-准备好mscoco的caption文件，或者使用github库自带的mscoco2017文件
-
-环境：仅需要额外装openai和tqdm两个库即可
+## 环境：基于原始python版本，仅需要额外装openai和tqdm两个库即可
 ```shell
 pip install openai tqdm
 ```
+
+## 使用方法：
+
+准备好mscoco的caption文件，或者使用github库自带的mscoco2017文件
 
 ```shell
 python generate.py --captiondata "captions_val2017.json" --output 'instructons.json'
