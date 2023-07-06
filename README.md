@@ -8,6 +8,11 @@
 
 准备好mscoco的caption文件，或者使用github库自带的mscoco2017文件
 
+环境：仅需要额外装openai和tqdm两个库即可
+```shell
+pip install openai tqdm
+```
+
 ```shell
 python generate.py --captiondata "captions_val2017.json" --output 'instructons.json'
 ```
