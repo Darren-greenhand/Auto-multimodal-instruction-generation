@@ -4,7 +4,8 @@
 
 自动生成多模态的指令微调数据
 
-## 环境：基于原始python版本，仅需要额外装openai和tqdm两个库即可
+## 环境
+基于原始python版本，仅需要额外装openai和tqdm两个库即可
 ```shell
 pip install openai tqdm
 ```
